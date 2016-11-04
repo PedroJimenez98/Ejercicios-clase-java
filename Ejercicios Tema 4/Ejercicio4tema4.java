@@ -1,5 +1,5 @@
 /**
- *buenos dias, tardes o noches
+ *salario semanal
  *
  *@author Pedro Jiménez
  */

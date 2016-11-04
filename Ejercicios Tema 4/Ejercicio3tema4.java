@@ -1,5 +1,5 @@
 /**
- *buenos dias, tardes o noches
+ *dia de la semana
  *
  *@author Pedro Jiménez
  */
