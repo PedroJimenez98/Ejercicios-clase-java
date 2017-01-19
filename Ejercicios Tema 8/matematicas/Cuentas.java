@@ -111,5 +111,69 @@ public class Cuentas {
     return x;
   } 
   
+  /*
+   * Dada una base y un exponente devuelve una potencia
+   * 
+   * @param base y exponente con los que se quieren calcular la potencia
+   * @return potencia
+   * 
+   */
+  
+  public static long potencia(int base, int exponente) {
+    
+    if (exponente == 0) {
+      return 1;
+    }
+    int n = 1;
+    
+    for (int i = 0; i < exponente; i ++) {
+      n = n * base;
+      
+    }
+    return n;
+  }
+  
+  /*
+   * Devuelve el dígito que está en la posición n de un número entero
+   * 
+   * @param x número al que se quiere sacar el dígito
+   * @param n lugar del dígito
+   * @return el dígito que está en la posición n
+   */
+   
+  public static int digitoN(long x, int n) {
+    
+    x = voltear(x);
+    
+    while (n-- > 0) {
+      x = x / 10;
+    }
+    return (int)x % 10;
+  }
+  
+  public static int digitoN(int x, int n) {
+    return digitoN((long) x, n);
+  }
+  
+  /*
+   *Da la posición de la primera ocurrencia de un dígito dentro de un número entero 
+   * 
+   * @param x número
+   * @return la posición del dígito deseado 
+   * 
+   */
+  
+  public static int posicionDeDigito(int x, int n) {
+      int i;
+      
+      for (i = 0; (i < digitos(x)) && (digitoN(x, i) != n); i++) {}
+    
+    if (i == digitos(x)) {
+      return -1;
+    } else {
+      return i;
+    }
+    
+  }
   
 }
